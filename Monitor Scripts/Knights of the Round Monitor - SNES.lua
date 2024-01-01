@@ -1,4 +1,4 @@
--- Set up montor --
+-- Set up monitor --
 
 displaytimers = true
 displayRNGCurrent = true
@@ -39,48 +39,48 @@ function stats()
   E3_HP_ExtraBars = memory.readbyte(0x6007)
   E3_HP_LB = memory.readbyte(0x600A)
   if displaytimers == true then
-    gui.text(560, 45, 'T1: ' .. t1)
-    gui.text(560, 60, 'T2: ' .. t2)
+    gui.text(20, 45, 'T1: ' .. t1)
+    gui.text(20, 60, 'T2: ' .. t2)
   end
   if displayRNGCurrent == true then
-    gui.text(560, 75, 'RNG: ' .. RNG)
+    gui.text(20, 75, 'RNG: ' .. RNG)
   end
   if displayscroll == true then
-    gui.text(560, 90, 'Scroll X: ' .. Scroll_X)
+    gui.text(20, 90, 'Scroll X: ' .. Scroll_X)
   end
   if player1stats == true then
-    gui.text(560, 120, 'Player 1')
-    gui.text(560, 125, '________________')
-    gui.text(560, 145, 'HP: ' .. P1_HP)
-    gui.text(640, 145, 'HP-LB: ' .. P1_HP_LB)
-    gui.text(560, 165, 'X: ' .. P1_X)
-    gui.text(640, 165, 'X Sub: ' .. P1_X_Sub)
-    gui.text(560, 180, 'Y: ' .. P1_Y)
-    gui.text(640, 180, 'Y Sub: ' .. P1_Y_Sub)
-    gui.text(560, 195, 'J: ' .. P1_Jump)
-    gui.text(640, 195, 'J Sub: ' .. P1_Jump_Sub)
+    gui.text(20, 120, 'Player 1')
+    gui.text(20, 125, '________________')
+    gui.text(20, 145, 'HP: ' .. P1_HP)
+    gui.text(120, 145, 'HP-LB: ' .. P1_HP_LB)
+    gui.text(20, 165, 'X: ' .. P1_X)
+    gui.text(120, 165, 'X Sub: ' .. P1_X_Sub)
+    gui.text(20, 180, 'Y: ' .. P1_Y)
+    gui.text(120, 180, 'Y Sub: ' .. P1_Y_Sub)
+    gui.text(20, 195, 'J: ' .. P1_Jump)
+    gui.text(120, 195, 'J Sub: ' .. P1_Jump_Sub)
   end
   if enemystats == true then
-    gui.text(560, 220, 'Enemy 1')
-    gui.text(560, 225, '________')
-    gui.text(560, 245, 'HP: ' .. E1_HP)
-    gui.text(560, 265, 'HP-EX: ' .. E1_HP_ExtraBars)
-    gui.text(560, 280, 'HP-LB: ' .. E1_HP_LB)
-    gui.text(660, 220, 'Enemy 2')
-    gui.text(660, 225, '________')
-    gui.text(660, 245, 'HP: ' .. E2_HP)
-    gui.text(660, 265, 'HP-EX: ' .. E2_HP_ExtraBars)
-    gui.text(660, 280, 'HP-LB: ' .. E2_HP_LB)
-    gui.text(760, 220, 'Enemy 3')
-    gui.text(760, 225, '________')
-    gui.text(760, 245, 'HP: ' .. E3_HP)
-    gui.text(760, 265, 'HP-EX: ' .. E3_HP_ExtraBars)
-    gui.text(760, 280, 'HP-LB: ' .. E3_HP_LB)
+    gui.text(20, 220, 'Enemy 1')
+    gui.text(20, 225, '________')
+    gui.text(20, 245, 'HP: ' .. E1_HP)
+    gui.text(20, 265, 'HP-EX: ' .. E1_HP_ExtraBars)
+    gui.text(20, 280, 'HP-LB: ' .. E1_HP_LB)
+    gui.text(120, 220, 'Enemy 2')
+    gui.text(120, 225, '________')
+    gui.text(120, 245, 'HP: ' .. E2_HP)
+    gui.text(120, 265, 'HP-EX: ' .. E2_HP_ExtraBars)
+    gui.text(120, 280, 'HP-LB: ' .. E2_HP_LB)
+    gui.text(220, 220, 'Enemy 3')
+    gui.text(220, 225, '________')
+    gui.text(220, 245, 'HP: ' .. E3_HP)
+    gui.text(220, 265, 'HP-EX: ' .. E3_HP_ExtraBars)
+    gui.text(220, 280, 'HP-LB: ' .. E3_HP_LB)
   end
 end
 
 while true do
-  client.SetGameExtraPadding(0,0,250,0)
+  client.SetGameExtraPadding(150,0,0,0)
   stats()
 	emu.frameadvance();
 end
